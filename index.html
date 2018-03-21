@@ -1,7 +1,1152 @@
-<html>
-<body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+		
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Mind Your Privacy</title>
 
-hihi hihi
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link href="css/animate.min.css" rel="stylesheet"> 
+	<link href="css/animate.css" rel="stylesheet" />
+	<link href="css/prettyPhoto.css" rel="stylesheet"> 
+	<link href="css/style.css" rel="stylesheet">
+	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="site-logo">
+						<a href="index" class="brand">Privacy</a><br>
+						<img src="images/temperature.png" style="width:20px;height:20px;"/><a id="temperature" onclick="refreshTemp()">Refresh</a>
+					</div>
+				</div>					  
 
-</body>
+				<div class="col-md-10">	 
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+							<i class="fa fa-bars"></i>
+						</button>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="menu">
+						<ul class="nav navbar-nav navbar-right">
+							  <li><a href="#home">Home</a></li>
+							  <li><a href="#about">About</a></li>
+							  <li><a href="#learn">Workshops</a></li>
+							  <li><a href="#news">news</a></li>
+								<li><a href="#qna">Q&A</a></li>
+						   	<li><a href="#contact">contact us</a></li>
+								<li><a id="logmein" onclick="loadMypage()">Mypage</a></li>	
+						</ul>
+					</div>
+					<!-- /.Navbar-collapse -->		 
+				</div>
+			</div>
+		</div>		
+	</nav>
+   
+    <div id="home">
+		<div class="slider">
+			<div id="about-slider">
+				<div id="carousel-slider" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators visible-xs">
+						<li data-target="#carousel-slider" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-slider" data-slide-to="1"></li>
+						<li data-target="#carousel-slider" data-slide-to="2"></li>
+					</ol>
+
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="images/6.jpg" class="img-responsive" alt=""> 
+						</div>
+					   <div class="item">
+							<img src="images/7.jpg" class="img-responsive" alt=""> 
+					   </div> 
+					   <div class="item">
+							<img src="images/5.jpg" class="img-responsive" alt=""> 
+					   </div> 
+					</div>
+					
+					<a class="left carousel-control hidden-xs" href="#carousel-slider" data-slide="prev">
+						<i class="fa fa-angle-left"></i> 
+					</a>
+					
+					<a class=" right carousel-control hidden-xs"href="#carousel-slider" data-slide="next">
+						<i class="fa fa-angle-right"></i> 
+					</a>
+					
+					
+				</div> <!--/#carousel-slider-->
+				
+				
+			</div><!--/#about-slider-->
+			<br><br>
+			<br>
+		</div>
+	</div>
+	
+    
+	<section id="about">
+		<div class="container">
+			<div class="center">
+				<div class="col-md-6 col-md-offset-3">
+					<h2>About</h2>
+					<hr>					
+					<p class="lead">Stay SMART! Protect Your Personal Data</p>
+				</div>
+			</div>
+		</div>
+	
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 wow fadeInRight">
+									<img src="images/1.png" class="img-responsive" />
+									<p>Our daily activities (such as shopping, handling financial bills, using smart phones, sharing information on social networks) involve personal data in one way or another.</p>
+
+                </div><!--/.col-sm-6-->
+
+                <div class="col-sm-6 wow fadeInDown">
+                    <div class="accordion">
+                        <div class="panel-group" id="accordion1">
+                          <div class="panel panel-default">
+                            <div class="panel-heading active">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">
+                                  10 Reasons Why Privacy Matters
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+
+                            <div id="collapseOne1" class="panel-collapse collapse in">
+                              <div class="panel-body">
+                                  <div class="media accordion-inner">
+                                        <div class="pull-left">
+                                            <img class="img-responsive" src="images/accordion1.png">
+                                        </div>
+                                        <div class="media-body">
+                                             <h4>Why does privacy matter?</h4>
+                                             <p>Often courts and commentators struggle to articulate why privacy is valuable. They see privacy violations as often slight annoyances. But privacy matters a lot more than that. Here are 10 reasons why privacy matters.</p>
+                                        </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo1">
+                                  Limit on Power
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseTwo1" class="panel-collapse collapse">
+															<div class="panel-body">
+																<p>Privacy is a limit on government power, as well as the power of private sector companies. The more someone knows about us, the more power they can have over us. Personal data is used to make very important decisions in our lives. Personal data can be used to affect our reputations; and it can be used to influence our decisions and shape our behavior. It can be used as a tool to exercise control over us. And in the wrong hands, personal data can be used to cause us great harm.</p>
+															</div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree1">
+                                  Respect for Individuals
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseThree1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                <p>Privacy is about respecting individuals. If a person has a reasonable desire to keep something private, it is disrespectful to ignore that person’s wishes without a compelling reason to do so. Of course, the desire for privacy can conflict with important values, so privacy may not always win out in the balance. Sometimes people’s desires for privacy are just brushed aside because of a view that the harm in doing so is trivial. Even if this doesn’t cause major injury, it demonstrates a lack of respect for that person. In a sense it is saying: “I care about my interests, but I don’t care about yours.”</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour1">
+                                  Reputation Management
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseFour1" class="panel-collapse collapse">
+															<div class="panel-body">
+																 <p>Privacy enables people to manage their reputations. How we are judged by others affects our opportunities, friendships, and overall well-being. Although we can’t have complete control over our reputations, we must have some ability to protect our reputations from being unfairly harmed. Protecting reputation depends on protecting against not only falsehoods but also certain truths. Knowing private details about people’s lives doesn’t necessarily lead to more accurate judgment about people. People judge badly, they judge in haste, they judge out of context, they judge without hearing the whole story, and they judge with hypocrisy. Privacy helps people protect themselves from these troublesome judgments.</p>
+															</div>
+                            </div>
+                          </div>
+													
+													<div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFive1">
+                                  Maintaining Appropriate Social Boundaries
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseFive1" class="panel-collapse collapse">
+															<div class="panel-body">
+																 <p>People establish boundaries from others in society. These boundaries are both physical and informational. We need places of solitude to retreat to, places where we are free of the gaze of others in order to relax and feel at ease. We also establish informational boundaries, and we have an elaborate set of these boundaries for the many different relationships we have. Privacy helps people manage these boundaries. Breaches of these boundaries can create awkward social situations and damage our relationships. Privacy is also helpful to reduce the social friction we encounter in life. Most people don’t want everybody to know everything about them – hence the phrase “none of your business.” And sometimes we don’t want to know everything about other people -- hence the phrase “too much information.”</p>
+															</div>
+                            </div>
+                          </div>
+													
+													<div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseSix1">
+                                 Trust
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseSix1" class="panel-collapse collapse">
+															<div class="panel-body">
+																 <p>In relationships, whether personal, professional, governmental, or commercial, we depend upon trusting the other party. Breaches of confidentiality are breaches of that trust. In professional relationships such as our relationships with doctors and lawyers, this trust is key to maintaining candor in the relationship. Likewise, we trust other people we interact with as well as the companies we do business with. When trust is breached in one relationship, that could make us more reluctant to trust in other relationships.</p>
+															</div>
+                            </div>
+                          </div>
+													
+													<div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseSeven1">
+                                  Control Over One’s Life
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseSeven1" class="panel-collapse collapse">
+															<div class="panel-body">
+																 <p>Personal data is essential to so many decisions made about us, from whether we get a loan, a license or a job to our personal and professional reputations. Personal data is used to determine whether we are investigated by the government, or searched at the airport, or denied the ability to fly. Indeed, personal data affects nearly everything, including what messages and content we see on the Internet. Without having knowledge of what data is being used, how it is being used, the ability to correct and amend it, we are virtually helpless in today’s world. Moreover, we are helpless without the ability to have a say in how our data is used or the ability to object and have legitimate grievances be heard when data uses can harm us. One of the hallmarks of freedom is having autonomy and control over our lives, and we can’t have that if so many important decisions about us are being made in secret without our awareness or participation.</p>
+															</div>
+                            </div>
+                          </div>
+													
+													<div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseEight1">
+                                  Freedom of Thought and Speech
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseEight1" class="panel-collapse collapse">
+															<div class="panel-body">
+																 <p>Privacy is key to freedom of thought. A watchful eye over everything we read or watch can chill us from exploring ideas outside the mainstream. Privacy is also key to protecting speaking unpopular messages. And privacy doesn’t just protect fringe activities. We may want to criticize people we know to others yet not share that criticism with the world. A person might want to explore ideas that their family or friends or colleagues dislike.</p>
+															</div>
+                            </div>
+                          </div>
+													
+													<div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseNine1">
+                                  Freedom of Social and Political Activities
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseNine1" class="panel-collapse collapse">
+															<div class="panel-body">
+																 <p>Privacy helps protect our ability to associate with other people and engage in political activity. A key component of freedom of political association is the ability to do so with privacy if one chooses. We protect privacy at the ballot because of the concern that failing to do so would chill people’s voting their true conscience. Privacy of the associations and activities that lead up to going to the voting booth matters as well, because this is how we form and discuss our political beliefs. The watchful eye can disrupt and unduly influence these activities.</p>
+															</div>
+                            </div>
+                          </div>
+													
+													<div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTen1">
+                                  Ability to Change and Have Second Chances
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseTen1" class="panel-collapse collapse">
+															<div class="panel-body">
+																 <p>Many people are not static; they change and grow throughout their lives. There is a great value in the ability to have a second chance, to be able to move beyond a mistake, to be able to reinvent oneself. Privacy nurtures this ability. It allows people to grow and mature without being shackled with all the foolish things they might have done in the past. Certainly, not all misdeeds should be shielded, but some should be, because we want to encourage and facilitate growth and improvement.</p>
+															</div>
+                            </div>
+                          </div>
+													
+													<div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseEleven1">
+                                  Not Having to Explain or Justify Oneself
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseEleven1" class="panel-collapse collapse">
+															<div class="panel-body">
+																 <p>An important reason why privacy matters is not having to explain or justify oneself. We may do a lot of things which, if judged from afar by others lacking complete knowledge or understanding, may seem odd or embarrassing or worse. It can be a heavy burden if we constantly have to wonder how everything we do will be perceived by others and have to be at the ready to explain.</p>
+															</div>
+                            </div>
+                          </div>
+													
+													
+													
+													
+                        </div><!--/#accordion1-->
+                    </div>
+                </div>
+
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#about-->
+   
+	<section id="learn">
+		<div class="container">
+			<div class="center">
+				<div class="col-md-6 col-md-offset-3">
+					<br><br>
+					<h2>Workshops</h2>
+					
+					<hr>	
+					<br>
+					<p class="lead">Data protection is become a vital component to the success of businesses in building employee trust and enhancing corporate image. If your business involves the collection and use of personal data, it is important that your staff are kept up-to-date and compliant with the requirements under the Personal Data (Privacy) Ordinance ("the Ordinance")</p>
+				</div>
+				<br>
+			</div>
+		</div>
+	
+        <div class="container">
+			<div class="col-lg-12">		
+				<ul class="portfolio-filter text-center">
+					<li><a class="btn btn-default active" href="#" data-filter="*">All</a></li>
+					<li><a class="btn btn-default" href="#" data-filter=".bootstrap">Hot</a></li>
+					<li><a class="btn btn-default" href="#" data-filter=".html">New</a></li>
+					<li><a class="btn btn-default" href="#" data-filter=".wordpress">available</a></li>
+				</ul><!--/#portfolio-filter-->
+
+				<div class="row">
+					<div class="portfolio-items">
+						
+						<div class="portfolio-item joomla bootstrap col-xs-12 col-sm-4 col-md-3">
+							<div class="recent-work-wrap">
+								<img class="img-responsive" src="images/portfolio/recent/item3.png" alt="">
+								<div class="overlay">
+									<div class="recent-work-inner">
+										<h3><a href="workshop1">Practical Workshop on Data Protection Law</a></h3>
+										<p>8 Feb</p>
+										<a class="preview" href="workshop1"><i class="fa fa-eye"></i> More</a>
+										<a class="btn btn-danger" style="float: right;" id="btnFav1" onclick="clickFav(1)" >LIKE</a>
+									</div> 
+								</div>
+							</div>
+						</div><!--/.portfolio-item-->
+
+						<div class="portfolio-item joomla bootstrap col-xs-12 col-sm-4 col-md-3">
+							<div class="recent-work-wrap">
+								<img class="img-responsive" src="images/portfolio/recent/item10.png" alt="">
+								<div class="overlay">
+									<div class="recent-work-inner">
+										<h3><a href="workshop2">Data Protection in Direct Marketing Activities</a></h3>
+										<p>26 Feb</p>
+										<a class="preview" href="workshop2"><i class="fa fa-eye"></i> More</a>
+										<a class="btn btn-danger" style="float: right;" id="btnFav2" onclick="clickFav(2)">LIKE</a>
+									</div> 
+								</div>
+							</div>          
+						</div><!--/.portfolio-item-->
+						
+						<div class="portfolio-item joomla bootstrap col-xs-12 col-sm-4 col-md-3">
+							<div class="recent-work-wrap">
+								<img class="img-responsive" src="images/portfolio/recent/item11.png" alt="">
+								<div class="overlay">
+									<div class="recent-work-inner">
+										<h3><a href="workshop3">Data Protection in Human Resource Management</a></h3>
+										<p>28 Feb</p>
+										<a class="preview" href="workshop3"><i class="fa fa-eye"></i> More</a>
+										<a class="btn btn-danger" style="float: right;" id="btnFav3" onclick="clickFav(3)">LIKE</a>
+									</div> 
+								</div>
+							</div>        
+						</div><!--/.portfolio-item-->
+
+						<div class="portfolio-item joomla apps col-xs-12 col-sm-4 col-md-3">
+							<div class="recent-work-wrap">
+								<img class="img-responsive" src="images/portfolio/recent/item8.png" alt="">
+								<div class="overlay">
+									<div class="recent-work-inner">
+										<h3><a href="workshop4">Data Protection in Banking/Financial Services</a></h3>
+										<p>8 Mar</p>
+										<a class="preview" href="workshop4"><i class="fa fa-eye"></i> More</a>
+										<a class="btn btn-danger" style="float: right;" id="btnFav4" onclick="clickFav(4)">LIKE</a>
+									</div> 
+								</div>
+							</div>           
+						</div><!--/.portfolio-item-->
+			  
+						<div class="portfolio-item html wordpress col-xs-12 col-sm-4 col-md-3">
+							<div class="recent-work-wrap">
+								<img class="img-responsive" src="images/portfolio/recent/item5.png" alt="">
+								<div class="overlay">
+									<div class="recent-work-inner">
+										<h3><a href="workshop5">Data Protection and Data Access Request</a></h3>
+										<p>9 Mar</p>
+										<a class="preview" href="workshop5"><i class="fa fa-eye"></i> More</a>
+										<a class="btn btn-danger" style="float: right;" id="btnFav5" onclick="clickFav(5)">LIKE</a>
+									</div> 
+								</div>
+							</div>      
+						</div><!--/.portfolio-item-->
+
+						<div class="portfolio-item wordpress col-xs-12 col-sm-4 col-md-3">
+							<div class="recent-work-wrap">
+								<img class="img-responsive" src="images/portfolio/recent/item2.png" alt="">
+								<div class="overlay">
+									<div class="recent-work-inner">
+										<h3><a href="workshop6">Recent Court and Administrative Appeals Board Decisions</a></h3>
+										<p>15 Mar</p>
+										<a class="preview" href="workshop6"><i class="fa fa-eye"></i> More</a>
+										<a class="btn btn-danger" style="float: right;" id="btnFav6" onclick="clickFav(6)">LIKE</a>
+									</div> 
+								</div>
+							</div>         
+						</div><!--/.portfolio-item-->
+
+						<div class="portfolio-item wordpress col-xs-12 col-sm-4 col-md-3">
+							<div class="recent-work-wrap">
+								<img class="img-responsive" src="images/portfolio/recent/item6.png" alt="">
+								<div class="overlay">
+									<div class="recent-work-inner">
+										<h3><a href="workshop7">Privacy Management Programme</a></h3>
+										<p>20 Mar</p>
+										<a class="preview" href="workshop7"><i class="fa fa-eye"></i> More</a>
+										<a class="btn btn-danger" style="float: right;" id="btnFav7" onclick="clickFav(7)">LIKE</a>
+									</div> 
+								</div>
+							</div>          
+						</div><!--/.portfolio-item-->
+
+						<div class="portfolio-item wordpress col-xs-12 col-sm-4 col-md-3">
+							<div class="recent-work-wrap">
+								<img class="img-responsive" src="images/portfolio/recent/item7.png" alt="">
+								<div class="overlay">
+									<div class="recent-work-inner">
+										<h3><a href="workshop8">Data Protection in Insurance</a></h3>
+										<p>26 Mar</p>
+										<a class="preview" href="workshop8"><i class="fa fa-eye"></i> More</a>
+										<a class="btn btn-danger" style="float: right;" id="btnFav8" onclick="clickFav(8)">LIKE</a>
+									</div> 
+								</div>
+							</div>          
+						</div><!--/.portfolio-item-->
+					</div>
+				</div>
+			</div>
+		</div>
+    </section><!--/#portfolio-item-->
+	
+	<section id="news">
+		<div class="container">
+			<div class="row">
+				<div class="center">
+					<div class="col-md-6 col-md-offset-3">
+						<h2>News</h2>
+						<hr>					
+						<p class="lead"></p><br><br>
+					</div>
+				</div>
+			
+				<div class="col-md-4 wow fadeInLeft">
+					<h3>14 February 2018</h3>
+					
+					<p><a href="news1" >Data Breach Notifications Soared Nearly 20 Percent in 2017
+						PCPD endeavours to assist corporations on privacy management in view of new overseas regulatory challenges ahead</a></p>
+				</div>
+				
+				<div class="col-md-4 wow fadeInUp">
+					<h3>11 January 2018</h3>
+					
+					<p><a href="news2" >Privacy Commissioner Issues the Revised Guidance on Election Activities and Reminds Candidates, Government Departments and Public Opinion Research Organisations to Comply with the Privacy Ordinance</a></p>
+				</div>
+				
+				<div class="col-md-4 wow fadeInRight">
+					<h3>10 January 2018</h3>
+					
+					<p><a href="news3" >Privacy Commissioner Concerns About Online Circulation of Video Clips and Photos of Private Activities in Hotel Rooms, Emphasising the Use of Recording Devices and Disclosure of Data Should Avoid Intrusion into the Privacy of Individuals</a></p>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="center">
+					<div class="col-md-6 col-md-offset-3">
+						<hr>					
+						<p class="lead"></p>
+					</div>
+				</div>
+				
+				<div class="col-md-4 wow fadeInLeft">
+					<h3>4 January 2018</h3>
+					
+					<p><a href="news4" >Privacy Commissioner Raised Concern Over the Frequent Occurrence of Data Security Incidents at Travel Agents Measures on Enhancing Data Security Reiterated</a></p>
+				</div>
+				
+				<div class="col-md-4 wow fadeInUp">
+					<h3>2 January 2018</h3>
+					
+					<p><a href="news5" >Direct Marketing: Customers’ Consent for Data</a></p>
+				</div>
+				
+				<div class="col-md-4 wow fadeInRight">
+					<h3>2 January 2018</h3>
+					
+					<p><a href="news6" >Privacy Commissioner Issues “Data Protection & Business Facilitation - Guiding Principles for Small and Medium Enterprises” Guidance Note</a></p>
+				</div>
+			</div>
+			
+			
+		</div>		
+	</section>
+	
+	<section id="qna">
+		<div class="container">
+			<div class="row">
+				<div class="center">
+					<div class="col-md-6 col-md-offset-3">
+						<br>
+						<h2>Q & A</h2>
+						<hr>					
+						<p class="lead"></p><br><br>
+					</div>
+				</div>
+				
+				<br>
+					<div class="col-md-12 wow fadeInLeft">
+					
+					<table id="myTable">
+						<tr class="header">
+							
+					<input type="text" id="myInput" onkeyup="tableFilter()" placeholder="Search for content.." title="Type in a name">
+		
+						
+						<br><br>
+						</tr>
+
+						<tr>
+							<td>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#qa1">
+												General
+												<i class="fa fa-angle-right pull-right"></i>
+											</a>
+										</h3>
+									</div>
+									<div id="qa1" class="panel-collapse collapse">
+										<div class="panel-body">
+
+											<h4>
+												What is personal data?</h4>
+											<p>
+												Personal data is recorded information, including expressions of opinion, relating to an identifiable living individual, which are organised such that they can be processed or retrieved. Examples of personal data used in everyday life include a person's name, telephone number, fax number, address, sex, age, occupation, marital status, salary and financial status, religious belief, nationality, photo, identity card number, medical records and employment records, including assessments of employment performance.</p>
+											<h4>
+												Does personal data refer to personal data in written documents only?</h4>
+											<p>
+												No, apart from written documents, personal data in other forms, such as audio and video tapes, is also covered under the Ordinance.</p>
+											<h4>
+												Does the Ordinance cover personal information held in both manual and computer files?</h4>
+											<p>
+												Yes, the Ordinance covers personal information in any type of storage system, subject to it meeting the definition of personal data.</p>
+											<h4>
+												Are my rights relating to personal data protected in every sphere of life?</h4>
+											<p>
+												Basically yes, but there are certain exemptions from specific provisions of the Ordinance.. These have been provided for in order to maintain the convenience of everyday life and uphold certain social and public interests. One area of exemption relates to personal data held for domestic or recreational purposes. These are generally exempted from the requirements of the Ordinance.</p>
+											<p>
+												To protect the public interest in such matters as security, defence, prevention or detection of crime, assessment or collection of tax, news activities and health, there are exemptions for data users from the requirements to grant access to individuals to their personal records and to limit the use of personal records to the original purpose at the time of the collection of information.</p>
+											<p>
+												For employment-related records, there are certain limited exemptions from the requirement to comply with access requests from individuals. For example, some employment-related personal information held before came into effect is exempt from such access until 2002.</p>
+											<h4>
+												Does the Ordinance cover private and public sector organisations, including Government departments?</h4>
+											<p>
+												Yes, the Ordinance covers private sector and public sector, including Government departments. The Commissioner can carry out investigations in relation to data users in these sectors.</p>
+
+										</div>
+									</div>
+								</div>
+							</td>						
+						</tr>
+						
+						<tr>
+							<td>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#qa2">
+												Blind Advertisement
+												<i class="fa fa-angle-right pull-right"></i>
+											</a>
+										</h3>
+									</div>
+									<div id="qa2" class="panel-collapse collapse">
+										<div class="panel-body">										
+											<h4>
+												What is a "blind" recruitment advertisement in the context of the Code of Practice on Human Resource Management ("the Code")?</h4>
+											<p>
+												Generally speaking, a "blind" recruitment advertisement is one that does not identify either the employer or the employment agency acting on its behalf.</p>
+											<h4>
+												Under what circumstances can job applicants be asked in a recruitment advertisement to submit personal data?</h4>
+											<p>
+												An employer or recruitment agency who clearly indicates its identity may ask job applicants to submit personal data in a recruitment advertisement, provided that the data are adequate but not excessive in relation to the purpose of recruitment and are to be used lawfully (section 2 of the Code).</p>
+											<h4>
+												Why is an employer required to identify itself in recruitment advertisements that solicit personal data from job applicants?</h4>
+											<p>
+												An employer who collects personal data from job applicants without identifying itself, or an appointed recruitment agency, might have engaged in an act of unfair collection of personal data contrary to the requirement of Data Protection Principle 1(2) of the Ordinance ("DPP1(2)"). DPP1(2) provides that personal data should be collected by means which are fair in the circumstances of the case. It would generally be unfair for persons collecting personal data not to identify themselves when collecting personal information. Secondly, personal data collected from job applicants are subject to access and correction by the person concerned. Unless exempted from doing so under the Ordinance, an employer is required to provide a copy of the data no later than 40 days after receiving a data access request. Job applicants would not be able to exercise their data access rights if they are denied the identity of the organisation who collects their personal data (clause 2.11 of the Code).</p>
+											<h4>
+												Some employers provide their fax number, postal address or e-mail address in a recruitment advertisement without explicitly asking job applicants to submit their personal data. Is this practice acceptable under the Code?</h4>
+											<p>
+												No. The practice of employers providing a fax number, postal address or e-mail address in a recruitment advertisement is perceived as a way of inviting job applicants to submit their personal data and is not permissible under the provisions of the Code.</p>
+											<p>
+												<span class="bold">Learn more:</span></p>
+											<p>
+												<a href="http://www.pcpd.org.hk/english/data_privacy_law/code_of_practices/files/PCPD_HR_Booklet_Eng_AW07_Web.pdf" rel="external" target="_blank"><span class="access">This link will open in a new window</span>Code of Practice on Human Resource Management</a></p>
+											<p>
+												<a href="http://www.pcpd.org.hk/english/data_privacy_law/code_of_practices/files/faq_recruitment_e.pdf" rel="external" target="_blank"><span class="access">This link will open in a new window</span>Understanding the Code of Practice on Human Resource Management - Frequently Asked Questions About Recruitment Advertisements</a></p>
+			
+										</div>
+									</div>
+								</div>
+							</td>						
+						</tr>
+						
+						<tr>
+							<td>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#qa3">
+												Collection of Identity Card Numbers or Copies for Identity Verification
+												<i class="fa fa-angle-right pull-right"></i>
+											</a>
+										</h3>
+									</div>
+									<div id="qa3" class="panel-collapse collapse">
+										<div class="panel-body">
+											
+		
+												<h4>
+													Can a bank request me to provide my HKID Card Number for exchanging a HK$500 note for notes of smaller denominations?</h4>
+												<p>
+													According to the Code of Practice on the Identity Card Number and other Personal Identifiers ("the Code") issued by the Privacy Commissioner, in general, a data user cannot compel an individual to provide his ID card number except with legal authority. Moreover, identity card numbers should not be collected, unless such collection is permitted under the Code. In view that such transaction did not involve substantial risk of money laundering activities, collection of HKID Card numbers was unnecessary.</p>
+												<p>
+													However, banks are permitted to collect HKID Card copies of their customers as due diligence measures before carrying out a transaction involving an amount equal to or above HK$120,000, and if that is a wire transfer, an amount equal to or above HK$8,000 so as to comply with the relevant requirement in the Anti-Money Laundering and Counter-Terrorist Financing (Financial Institutions) Ordinance.</p>
+												<h4>
+													Do I need to provide my HKID Card copy to my prospective employer?</h4>
+												<p>
+													The Code permits a data user to collect the copy of an HKID Card in order to provide proof of compliance with any statutory requirement. An example of such statutory requirement is given under that paragraph in section 17J of the Immigration Ordinance (Cap 115). Employers should not collect HKID Card Copy of job applicants during the recruitment process unless and until the candidate has accepted the offer of employment. Therefore, you are only required to provide your HKID Card Copy upon acceptance of the job offer.</p>
+												<p>
+													<span class="bold">Learn more:</span></p>
+												<p>
+													<a href="http://www.pcpd.org.hk/english/data_privacy_law/code_of_practices/files/picode_en.pdf" rel="external" target="_blank"><span class="access">This link will open in a new window</span>Code of Practice on the Identity Card Number and other Personal Identifiers</a></p>
+												<p>
+													<a href="http://www.pcpd.org.hk/english/data_privacy_law/code_of_practices/files/ID_Leaflet_e.pdf" rel="external" target="_blank"><span class="access">This link will open in a new window</span>Your Identity Card Number and Your Privacy</a></p>
+												<p>
+													<a href="../../files/individuals/annex20131205_e.pdf" rel="external" target="_blank"><span class="access">This link will open in a new window</span>A Summary of Real Cases : Indiscriminate Collection of Identity Card Numbers or Copies for Identity Verification</a></p>
+
+	
+										</div>
+									</div>
+								</div>
+							</td>						
+						</tr>
+						
+						<tr>
+							<td>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#qa4">
+												Direct Marketing
+												<i class="fa fa-angle-right pull-right"></i>
+											</a>
+										</h3>
+									</div>
+									<div id="qa4" class="panel-collapse collapse">
+										<div class="panel-body">
+											
+											<h4>
+												I have a savings account at "Bank A". Recently I received a phone call from a staff member of this bank marketing its investment products to me. I am really annoyed at this kind of direct marketing calls. How does the Ordinance protect me from the unsolicited approach?</h4>
+											<p>
+												<span class="bold">Regulation on data protection in direct marketing</span></p>
+											<p>
+												Part VIA of the Ordinance regulates the use and provision for use of personal data in direct marketing activity.</p>
+											<p>
+												Data user (Bank A) is required to inform the data subject (you as a client of the bank) certain prescribed information and to obtain his consent. Prescribed information include the notification that the data user intends to use your personal data in direct marketing; that it will not so use your personal data unless it has received your consent or indication of no objection; the kinds of personal data to be used; and the classes of goods, facilities or services that it will promote to you.</p>
+											<p>
+												The data user should also provide the data subject with a response channel to communicate his consent or indication of no objection. Non-response of the data subject to the data user's notification does not constitute consent or an indication of no objection. The data user cannot use the data subject's personal data in direct marketing unless it has obtained the consent or an indication of no objection from the data subject.</p>
+											<p>
+												Failure to comply with the new requirements by the data user is a criminal offence punishable by a fine and imprisonment.</p>
+											<p>
+												<span class="bold">When you receive a marketing message, ask yourself:</span></p>
+											<p>
+												Had the organisation sent you direct marketing messages before 1 April 2013 regarding the same kind of products it currently promotes, and you had never rejected those messages?</p>
+											<p>
+												YES – Bank A may invoke the grandfathering provisions of the Ordinance. In which case, it can continue to use your personal data for the purpose of direct marketing the same class of products, without having to inform you of the prescribed information and obtain your consent or indication of no objection.</p>
+											<p>
+												NO –Bank A may commit a breach of the new requirements if it had not obtained your consent or indication of no objection for using your personal data in direct marketing the current type of products. You may ask Bank A to remedy the breach or lodge a complaint to the PCPD.</p>
+											<p>
+												<span class="bold">You can opt out at anytime</span></p>
+											<p>
+												As a data subject, you can opt out from direct marketing at anytime whether or not you have previously consented to receiving direct marketing messages.</p>
+											<p>
+												Although the Ordinance does not prescribe the manner of how a data subject should raise an opt-out request, the PCPD advises data subject to do so in writing for better protection. You should keep a copy of it which can serve as evidence for future investigation.</p>
+											<p>
+												If, after you have made an opt-out request and the organisation still keeps on using your personal data for direct marketing purpose, it may have committed an offence under the Ordinance.</p>
+											<p>
+												<span class="bold">Learn more:</span></p>
+											<p>
+												<a href="https://www.pcpd.org.hk//english/resources_centre/publications/files/opt_out2015_e.pdf" rel="external" target="_blank"><span class="access">This link will open in a new window</span>Exercising Your Right of Consent to and Opt-out from Direct Marketing Activities under the Personal Data (Privacy) Ordinance</a></p>
+											<p>
+												<a href="http://www.pcpd.org.hk/english/resources_centre/publications/posters_Infographics/files/DM_infographic_1231_e.pdf" rel="external" target="_blank"><span class="access">This link will open in a new window</span>Infographic: It is Your Choice to Accept or Refuse Direct Marketing. File a Complaint Against Failed Opt-Out Requests</a></p>
+											<p>
+												<a href="../../complaints/how_complaint/procedure/complaint_proced.html" rel="external" target="_blank"><span class="access">This link will open in a new window</span>How to Make a Complaint</a></p>
+
+										</div>
+									</div>
+								</div>
+							</td>						
+						</tr>
+						
+						<tr>
+							<td>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#qa5">
+												Disclosure of information
+												<i class="fa fa-angle-right pull-right"></i>
+											</a>
+										</h3>
+									</div>
+									<div id="qa5" class="panel-collapse collapse">
+										<div class="panel-body">
+											
+											<h4>
+												I read from the news that a telephone company would provide its subscribers' telephone numbers and address information to the Fire Services Department ("FSD") to facilitate its handling of emergency calls more efficiently. Has it contravened the Ordinance?</h4>
+											<p>
+												Having approached both organizations, it was clarified that the telephone company would only provide to FSD the telephone number and installation address of the numbers concerned, i.e. the building or the estate from which the call is made. No full address and name of the subscriber would be disclosed to FSD.</p>
+											<p>
+												According to section 2 of the Ordinance, personal data means any data relating directly or indirectly to a living individual and from which it is practicable for the identity of the individual to be directly or indirectly ascertained. As the information passed over by the telephone company to FSD do not contain any personal identifying particulars such as name and full address, these data are not regarded as personal data and this arrangement would not be in breach of the Ordinance.</p>
+
+										</div>
+									</div>
+								</div>
+							</td>						
+						</tr>
+						
+						<tr>
+							<td>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#qa6">
+												Employee Monitoring
+												<i class="fa fa-angle-right pull-right"></i>
+											</a>
+										</h3>
+									</div>
+									<div id="qa6" class="panel-collapse collapse">
+										<div class="panel-body">
+
+											<h4>
+												Can employers monitor employees' e-mails and phone calls?</h4>
+											<p>
+												Before deciding to monitor, employers should first assess whether it is really necessary to conduct such activity having regard to the business risks that they seek to manage and the impact on personal data privacy of its employees. Employers should consider alternatives available in order to lessen the adverse impact brought by the monitoring activity. In carrying out monitoring, employers should also implement clear Employee Monitoring Policy and communicate it to the staff affected. The use, retention and processing of personal data collected should also be kept under control so as not to contravene the requirements under the Ordinance.</p>
+											<p>
+												<span class="bold">Learn more:</span></p>
+											<p>
+												<a href="http://www.pcpd.org.hk/english/resources_centre/publications/files/Monitoring_and_Personal_Data_Privacy_At_Work_revis_Eng.pdf" rel="external" target="_blank"><span class="access">This link will open in a new window</span>Privacy Guidelines: Monitoring and Personal Data Privacy at Work</a></p>
+											<h4>
+												Can employers of domestic helpers install surveillance cameras at home?</h4>
+											<p>
+												The same assessment process as mentioned above also applies. Given that the workplace is also the place of rest for the domestic helpers, employers should seriously consider whether it is really necessary to engage in such activity, the reasonableness as well as the openness of the activity. They should therefore inform their helpers of such practice, restrict monitoring to targeted areas (not toilets or other private areas) and make clear the purpose of monitoring and the retention period for the taped records.</p>
+											<p>
+												<span class="bold">Learn more:</span></p>
+											<p>
+												<a href="http://www.pcpd.org.hk/english/resources_centre/publications/files/points_to_note_15102015_e.pdf" rel="external" target="_blank"><span class="access">This link will open in a new window</span>Monitoring and Personal Data Privacy at Work: Points to Note for Employers of Domestic Helpers"</a></p>
+											<h4>
+												Can employers install pinhole cameras?</h4>
+											<p>
+												Covert monitoring is not encouraged especially when it is being used as preventive measure only. Unless justified by existence of relevant special circumstances, such as "a reasonable suspicion" of unlawful activity and there is no reasonable alternative, this should only be engaged in as a last resort.</p>
+											<p>
+												<a href="https://www.pcpd.org.hk//english/resources_centre/publications/files/GN_CCTV_Drones_e.pdf" rel="external" target="_blank"><span class="access">This link will open in a new window</span>Guidance on CCTV Surveillance and Use of Drones</a></p>
+											<h4>
+												What can employees do if they find employers not following the "Privacy Guidelines: Monitoring and Personal Data Privacy at Work"?</h4>
+											<p>
+												They can complain to the Privacy Commissioner, who can follow up with the employer and examine the case by reference to the recommended good practices suggested in the Guidelines. If the employer is uncooperative and the law on personal data protection has been breached, the Commissioner may serve an enforcement notice on the employer directing for remedial action, which, if not complied with, can attract criminal sanction.</p>
+											<p>
+												<span class="bold">Learn more:</span></p>
+											<p>
+												<a href="../../complaints/how_complaint/procedure/complaint_proced.html" rel="external" target="_blank"><span class="access">This link will open in a new window</span>How to Make a Complaint</a></p>
+
+										</div>
+									</div>
+								</div>
+							</td>						
+						</tr>
+						
+						<tr>
+							<td>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#qa7">
+												Use of CCTV
+												<i class="fa fa-angle-right pull-right"></i>
+											</a>
+										</h3>
+									</div>
+									<div id="qa7" class="panel-collapse collapse">
+										<div class="panel-body">
+											
+											<h4>
+												Can government departments install closed-circuit televisions at gambling and hawker blackspots in housing estates, such as pavilions and parks, to tackle the problems?</h4>
+											<p>
+												We will not comment on individual cases before understanding the specific situation.</p>
+											<p>
+												According to the Ordinance, "personal data" are any data relating to a living individual, which are stored in recorded form making access to or processing practicable and from which it is practicable for the identity of the individual to be directly or indirectly ascertained from it. Generally speaking, to constitute an act of collection of personal data by the data user, there should be compilation of information about an individual, whose identity must have been identified by the data user, or the data user intends or seeks to identify the identity of the individual.</p>
+											<p>
+												In general, if a monitoring and recording system is installed in a public place merely for the sake of security, it may not constitute collection of personal data (unless the data of a certain or some particular individuals are collected) and it may not be subject to the Ordinance. However, collection of personal data may take place under some special circumstances. For example, after a special incident has happened, the Authority concerned may need to review the video records for the purpose of ascertaining the identity of the individuals involved in the incident and it may then amount to collection of personal data. Therefore, organizations which intend to install monitoring and recording systems should, at least, post a notice in a prominent position near the installation, stating that the area is being monitored, the purposes of monitoring, as well as the ways of handling the records.</p>
+											<p>
+												Broadly speaking, organizations can install monitoring and recording systems only if it is necessary for fulfilling their legitimate functions or activities, such as for security reasons, the monitoring of illegal acts (e.g. throwing objects from height, installation of closed-circuit televisions at hygiene blackspots by Team Clean), etc. Before an organization installs a monitoring and recording system, it is suggested that it should establish the collection purposes, evaluate the risks of monitoring, and consider if there is any other substitute that is less privacy intrusive in order to strike a balance between the protection of privacy rights of individuals and the smooth operation of the organizations.</p>
+											<p>
+												When an organization has decided to install a monitoring and recording system, it is suggested that in the interest of transparency it should post a notice in a prominent position near the installation (the notice should be as close to the installation as practicable; the words should be clear and noticeable) so that sufficient notice is drawn to the public or the people affected hat their activities may be recorded and the reasons for collection of their personal data. The organizations concerned are suggested to formulate policies on video monitoring, and the persons who can access and view the contents of the tapes. Moreover, the organizations should also prescribe the retention period of the tapes and delete the data in the tapes accordingly, and steps shall also be taken to ensure that the tapes are securely kept.</p>
+											<p>
+												In conclusion, when using monitoring and recording devices in public place, it is our view that a proper balance should be struck between the protection of public interests and personal data privacy. Data users should handle the issue in a fair and transparent manner giving due regards to the rights of personal data privacy.</p>
+											<p>
+												<span class="bold">Learn more:</span></p>
+											<p>
+												<a href="https://www.pcpd.org.hk//english/resources_centre/publications/files/GN_CCTV_Drones_e.pdf" rel="external" target="_blank"><span class="access">This link will open in a new window</span>Guidance on CCTV Surveillance and Use of Drones</a></p>
+
+											
+										</div>
+									</div>
+								</div>
+							</td>						
+						</tr>
+						
+					</table>
+						
+				</div>
+				
+			
+			
+		</div>		
+	</section>
+		
+	
+	
+		<div class="map">
+			<iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=12/F+Sunlight Tower+248 Queen's Road East+Wanchai,+HongKong&amp;aq=3&amp;oq=kuningan+&amp;sll=22.274578,114.1735354&amp;sspn=22.274578,114.1735354&amp;ie=UTF8&amp;hq=&amp;hnear=HongKong&amp;t=m&amp;z=14&amp;ll=22.274578,114.1735354&amp;output=embed">
+			</iframe>
+		</div>
+		<center>
+		<Strong>
+		Opening hours of Reception Counter:
+		</Strong>
+		<br>
+ 
+		Monday to Friday:
+		8:45 a.m. to 12:45 p.m. &
+		1:50 p.m. to 5:40 p.m.
+		<br>
+
+		<strong>
+		Address:
+		</strong>
+		<br>
+		12/F, Sunlight Tower,
+		248 Queen's Road East,
+		Wanchai,
+		Hong Kong.</center>
+		<br><br><br>
+
+		
+	<section id="contact">
+		<div class="contact-page">
+			<div class="container">
+				<div class="center">    
+					<br><br>
+					<h2>Leave message</h2>		
+				</div> 
+					<div class="row contact-wrap">						
+					<div class="status alert alert-success" style="display: none"></div>
+					<form id="mesform" class="contact-form" >
+						<div class="wow fadeInDown">
+							<div class="col-sm-5 col-sm-offset-1">
+								<div class="form-group">
+									<label>Name *</label>
+									<input type="text" name="name" class="form-control" required="required">
+								</div>
+								<div class="form-group">
+									<label>Email *</label>
+									<input type="email" name="email" class="form-control" required="required">
+								</div>
+								<div class="form-group">
+									<label>Phone</label>
+									<input type="number" class="form-control">
+								</div>
+								<div class="form-group">
+									<label>Company Name</label>
+									<input type="text" class="form-control">
+								</div>                        
+							</div>
+						</div>
+						<div class="wow fadeInRight">
+							<div class="col-sm-5">
+								<div class="form-group">
+									<label>Subject *</label>
+									<input type="text" name="subject" class="form-control" required="required">
+								</div>
+								<div class="form-group">
+									<label>Message *</label>
+									<textarea name="message" id="message" required="required" class="form-control" rows="8"></textarea>
+								</div>                        
+								<div class="form-group">
+									<input type="button" name="submit" class="btn btn-primary btn-lg" onclick="sendMessage()"value ="Submit Message"/>
+								</div>
+							</div>
+						</div>
+					</form> 
+				</div><!--/.row-->
+				
+			</div><!--/.container-->
+		</div><!--/#contact-page-->		
+	</section>	
+
+		
+	
+		
+		
+	<footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+							<div>
+<center><script src="https://cdn.htmlgames.com/embed.js?game=DailyBridges&amp;width=800&amp;height=480&amp;bgcolor=white"></script></center>
+</div>
+                <div class="col-md-6 col-md-offset-3">
+					<div class="text-center">
+						<a href="#home" class="scrollup"><i class="fa fa-angle-up fa-3x"></i></a>
+					</div>
+                    &copy; 2018 <a target="_blank" href="http://port-9999.helloworld-garyluichuntingpeak2357682.codeanyapp.com/index" title="Free Twitter Bootstrap WordPress Themes and HTML templates">Mind Your Privacy</a>. All Rights Reserved.
+                    <!-- 
+                        All links in the footer should remain intact. 
+                        Licenseing information is available at: http://bootstraptaste.com/license/
+                        You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=OnePage
+                    -->
+                </div>
+				
+                <div class="top-bar">			
+					<div class="col-lg-12">
+					   <div class="social">
+							<ul class="social-share">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-skype"></i></a></li>
+							</ul>
+					   </div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </footer><!--/#footer-->
+	
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script> 
+	<script src="js/wow.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>	
+	<script src="js/main.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script>
+		
+	window.onload = function() {
+		refreshTemp();
+		checkLogin();
+		
+		//alert(document.getElementById("btnFav1").value + document.getElementById("btnFav2").value);
+	};	
+		
+	function refreshTemp(){
+			jQuery(document).ready(function($) {
+				$.ajax({
+				url : "http://api.wunderground.com/api/b20b6bbf1fd069a8/geolookup/conditions/q/HK/HongKong.json",
+				dataType : "jsonp",
+				success : function(parsed_json) {
+					var temp_c = parsed_json['current_observation']['temp_c'];
+					document.getElementById("temperature").innerHTML = temp_c + "&deg;C";
+				}
+				});
+			});
+	}	
+	
+	function checkLogin(){
+		if(localStorage.getItem("loginstate") == "0"){
+			document.getElementById("logmein").innerHTML = localStorage.getItem("loginname");
+			document.getElementById("logmein").style="color:lightgreen";
+			checkFav(localStorage.getItem("favlist"));
+		}else{
+			document.getElementById("logmein").innerHTML = "mypage";
+			localStorage.setItem("loginID",-1);
+		}
+	}	
+		
+	function checkFav(value){
+		var max = 8;
+		var temp = max;
+		var btns =[
+			document.getElementById("btnFav1"),
+			document.getElementById("btnFav2"),
+			document.getElementById("btnFav3"),
+			document.getElementById("btnFav4"),
+			document.getElementById("btnFav5"),
+			document.getElementById("btnFav6"),
+			document.getElementById("btnFav7"),
+			document.getElementById("btnFav8")	
+		]
+		for(i = max-1; i >= 0 ;i--){
+			//alert(value - Math.pow(2,i));
+			if(value - Math.pow(2,i) >= 0){
+				//alert("LIKED!");
+				btns[i].innerHTML = "UNLIKE";	
+				value -= Math.pow(2,i);
+			}
+			else
+				btns[i].innerHTML = "LIKE";	
+		}
+	}
+		
+		
+	function clickFav(value){
+		if(localStorage.getItem("loginstate") != "0"){
+			alert("Please login");
+			window.location.href="login";
+			return;
+		}
+		var btns =[
+			document.getElementById("btnFav1"),
+			document.getElementById("btnFav2"),
+			document.getElementById("btnFav3"),
+			document.getElementById("btnFav4"),
+			document.getElementById("btnFav5"),
+			document.getElementById("btnFav6"),
+			document.getElementById("btnFav7"),
+			document.getElementById("btnFav8")	
+		]
+		var favValue= Math.pow(2,value-1);
+		if(btns[value-1].innerHTML == "UNLIKE")
+			favValue = 0-favValue;
+		var newFavList = parseInt(localStorage.getItem("favlist")) + favValue;
+		localStorage.setItem("favlist", newFavList);
+
+		$.ajax(
+				{	
+					url: "http://port-9999.db-garyluichuntingpeak1374430.codeanyapp.com/fav", 
+					type: 'POST',
+					data: "id="+localStorage.getItem("loginID")+"&fav="+localStorage.getItem("favlist"),
+					success: function(result){
+						checkFav(result);
+
+					},error: function (xhr, textStatus, errorThrown) {
+						//alert(textStatus);
+						console.log(textStatus);
+					}
+				}
+			);	
+	}
+		
+	function sendMessage(){
+	
+		$.ajax(
+				{	
+					url: "http://port-9999.db-garyluichuntingpeak1374430.codeanyapp.com/sendMessage", 
+					type: 'POST',
+					data: $('#mesform').serialize(),
+					//data: "id="+localStorage.getItem("loginID")+"&fav="+localStorage.getItem("favlist"),
+					success: function(result){
+						alert(result);
+
+					},error: function (xhr, textStatus, errorThrown) {
+						//alert(textStatus);
+						console.log(textStatus);
+					}
+				}
+			);	
+	}
+			
+		
+		
+	function loadMypage(){
+		if(localStorage.getItem("loginstate") == "0"){
+			window.location.href="mypage";
+		}else{
+			alert("Please login");
+			window.location.href="login";
+		}
+	}	
+		
+		
+	function loadSignUp() {
+		window.location.href = "signup";
+
+	}
+	function loadForgot() {
+		window.location.href = "forgot";
+	}
+		
+	function tableFilter() {
+		var input, filter, table, tr, td, i;
+		input = document.getElementById("myInput");
+		filter = input.value.toUpperCase();
+		table = document.getElementById("myTable");
+		tr = table.getElementsByTagName("tr");
+		for (i = 0; i < tr.length; i++) {
+			td = tr[i].getElementsByTagName("td")[0];
+			if (td) {
+				if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+					tr[i].style.display = "";
+				} else {
+					tr[i].style.display = "none";
+				}
+			}       
+		}
+	}
+	
+	</script>
+  </body>
 </html>

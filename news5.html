@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Mind Your Privacy</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link href="css/animate.min.css" rel="stylesheet"> 
+	<link href="css/animate.css" rel="stylesheet" />
+	<link href="css/prettyPhoto.css" rel="stylesheet"> 
+	<link href="css/style.css" rel="stylesheet">
+	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="site-logo">
+						<a href="index" class="brand">Privacy</a><br>
+						<img src="images/temperature.png" style="width:20px;height:20px;"/><a id="temperature" onclick="refreshTemp()">Refresh</a>
+					
+					</div>
+				</div>					  
+
+				<div class="col-md-10">	 
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+							<i class="fa fa-bars"></i>
+						</button>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="menu">
+						<ul class="nav navbar-nav navbar-right">
+								<li><a id="logmein" onclick="loadMypage()">Mypage</a></li>
+						</ul>
+					</div>
+					<!-- /.Navbar-collapse -->		 
+				</div>
+			</div>
+		</div>		
+	</nav>
+
+	<section id="news">
+		<div class="container">
+			<div class="row">
+				<div class="center">
+					<div class="col-md-12 col-md-offset-0">
+						<br><br><br><br><br><br>
+						<h2>Direct Marketing: Customers’ Consent for Data</h2>
+						<hr>					
+					</div>
+				</div>
+				<br>
+			</div>
+			
+			<div class="row">
+				<div class="center">
+					<div class="col-md-6 col-md-offset-3">
+						<hr>					
+						<p class="lead"></p>
+					</div>
+				</div>
+				
+				<div class="col-md-12 wow fadeInLeft">
+						PARKnSHOP (HK) Limited (the Company) was convicted today at the Tuen Mun Magistrates’ Court of the offence under section 35E(1) of the Personal Data (Privacy) Ordinance (the Ordinance) for using the personal data of a data subject in direct marketing without obtaining the data subject’s consent.&nbsp; The Company pleaded guilty to the charge and was fined HK$3,000.&nbsp; This is the first conviction for the offence of section 35E(1) since the amendment provisions of the Ordinance relating to direct marketing came into effect on 1 April 2013.&nbsp; Section 35E(1) provides that a data user who has complied with section 35C by taking the specified actions (that is informing the data subject his rights and the requisite information) must not use the data subject’s personal data in direct marketing without obtaining his consent.&nbsp; &nbsp;<br>
+						&nbsp;<br>
+						<strong><u>Case Background</u></strong><br>
+						&nbsp;<br>
+						The case stemmed from a complaint received by the office of the Privacy Commissioner for Personal Data, Hong Kong (PCPD) in January 2016.&nbsp;<br>
+						&nbsp;<br>
+						The complainant was a registered customer of the online supermarket of the Company and provided his personal data including his email address to the Company for registration.&nbsp; The complainant had never indicated to the Company that he wished to receive any direct marketing materials.&nbsp; In January 2016, the complainant received a direct marketing email from the Company.&nbsp; Subsequently, the complainant lodged a complaint with the PCPD.&nbsp; During the processing of the complaint by the PCPD, the Company has admitted that the complainant had not given consent for receiving its direct marketing materials and the email was accidentally sent to the complainant due to an isolated incident of human error while doing system update.&nbsp;<br>
+						&nbsp;<br>
+						<strong><u>PCPD’s Comments</u></strong><br>
+						<br>
+						The Privacy Commissioner for Personal Data, Hong Kong (The Privacy Commissioner) Mr Stephen Kai-yi WONG said, “The Ordinance does not prohibit direct marketing activities.&nbsp; However, organisations must comply with the requirements of the Ordinance when carrying out direct marketing activities.&nbsp; Organisations must obtain a data subject’s consent before using his personal data in direct marketing.&nbsp; Appropriate training must be provided to its staff members to ensure their awareness of and compliance with the direct marketing provisions under the Ordinance.&nbsp; The conviction once again reminds organisations of such requirements, and at the same time strengthens the culture of respecting personal data privacy within organisations.”<br>
+						<br>
+						The Privacy Commissioner also reminded consumers about their rights on receiving direct marketing materials, “If a consumer receives direct marketing materials addressing to him from an organisation but he has not indicated his consent to the organisation for receiving its direct marketing materials, he should make a record and gather as many details as possible in order to lodge a complaint.”<br>
+						<br>
+						Pursuant to section 35E(1) of the Ordinance, a company who has complied with section 35C, must not use personal data in direct marketing without a data subject’s consent. Failure to comply with the requirement is a criminal offence which is punishable by a fine of up to HK$500,000 and imprisonment of up to 3 years.<br>
+						<br>
+						The PCPD has published the following publications for organisations and consumers:<br>
+						<br>
+						For guidance on legal compliance, data users can refer to the “<a href="https://www.pcpd.org.hk/english/resources_centre/publications/files/GN_DM_e.pdf">New Guidance on Direct Marketing</a>”<br>
+						<br>
+						As for consumers, please refer to:<br>
+						<ul>
+							<li>
+								Information Leaflet “<a href="http://www.pcpd.org.hk/english/resources_centre/publications/files/opt_out2015_e.pdf">Exercising Your Right of Consent to and Opt-out from Direct Marketing Activities under the Personal Data (Privacy) Ordinance</a>”</li>
+							<li>
+								An easy-to-understand infographic “<a href="http://www.pcpd.org.hk/english/resources_centre/publications/posters_Infographics/files/DM_infographic_1231_e.pdf">It is Your Choice to Accept or Refuse Direct Marketing</a>”</li>
+						</ul>
+						<div style="text-align: center;">
+							<br>
+							-END-</div>
+						 <!-- END CONTENT -->
+										 <!-- END CONTENT -->
+             <br><br><br>
+			
+					
+				</div>
+				
+		
+				
+			<br><br><br>
+			
+		</div>		
+	</section>
+	
+	<footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+					
+                    &copy; 2018 <a target="_blank" href="http://port-9999.helloworld-garyluichuntingpeak2357682.codeanyapp.com/index" title="Free Twitter Bootstrap WordPress Themes and HTML templates">Mind Your Privacy</a>. All Rights Reserved.
+                    <!-- 
+                        All links in the footer should remain intact. 
+                        Licenseing information is available at: http://bootstraptaste.com/license/
+                        You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=OnePage
+                    -->
+                </div>
+				
+                <div class="top-bar">			
+					<div class="col-lg-12">
+					   <div class="social">
+							<ul class="social-share">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-skype"></i></a></li>
+							</ul>
+					   </div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </footer><!--/#footer-->
+	
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script> 
+	<script src="js/wow.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>	
+	<script src="js/main.js"></script>
+	<script>
+		window.onload = function() {
+		refreshTemp();
+		checkLogin();
+		
+		//alert(document.getElementById("btnFav1").value + document.getElementById("btnFav2").value);
+	};	
+		
+	function refreshTemp(){
+			jQuery(document).ready(function($) {
+				$.ajax({
+				url : "http://api.wunderground.com/api/b20b6bbf1fd069a8/geolookup/conditions/q/HK/HongKong.json",
+				dataType : "jsonp",
+				success : function(parsed_json) {
+					var temp_c = parsed_json['current_observation']['temp_c'];
+					document.getElementById("temperature").innerHTML = temp_c + "&deg;C";
+				}
+				});
+			});
+	}	
+	
+	function checkLogin(){
+		if(localStorage.getItem("loginstate") == "0"){
+			document.getElementById("logmein").innerHTML = localStorage.getItem("loginname");
+			document.getElementById("logmein").style="color:lightgreen";
+			checkFav(localStorage.getItem("favlist"));
+		}else{
+			document.getElementById("logmein").innerHTML = "mypage";
+		}
+	}	
+	function loadMypage(){
+		if(localStorage.getItem("loginstate") == "0"){
+			window.location.href="mypage";
+		}else{
+			alert("Please login");
+			window.location.href="login";
+		}
+	}	
+	</script>
+  </body>
+</html>

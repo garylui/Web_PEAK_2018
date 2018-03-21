@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Mind Your Privacy</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link href="css/animate.min.css" rel="stylesheet"> 
+	<link href="css/animate.css" rel="stylesheet" />
+	<link href="css/prettyPhoto.css" rel="stylesheet"> 
+	<link href="css/style.css" rel="stylesheet">
+	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="site-logo">
+						<a href="index" class="brand">Privacy</a><br>
+						<img src="images/temperature.png" style="width:20px;height:20px;"/><a id="temperature" onclick="refreshTemp()">Refresh</a>
+					</div>
+				</div>					  
+			
+				<div class="collapse navbar-collapse" id="menu">
+						<ul class="nav navbar-nav navbar-right">
+								<li><a  id="logmein" onclick="loadMypage()">Mypage</a></li>				
+						</ul>
+					</div>
+				
+				
+				
+				<div class="col-md-10">	 
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+							<i class="fa fa-bars"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</nav>
+
+	<section id="login">
+		<div class="contact-page">
+			<div class="container">
+				<br><br><br><br>
+				<div class="center">        
+					<h2>Login</h2>						
+				</div> 
+				<br>
+	
+				<div class="stand">
+					<div class="outer-screen">
+						<div class="inner-screen">
+							<div class="form">
+								<form id="loginform">
+									<div class="form-group">
+										<label><font color="white">User Name (Email) *</font></label>
+										<input type="text" name="account" class="form-control" required="required" id="account">
+									</div>
+									<div class="form-group">
+										<label><font color="white">Password *</font></label>
+										<input type="password" name="password" class="form-control" required="required" id="password">
+									</div>
+									<div class ="form-group">
+										<label id="warning" style="color:red"></label>
+									</div>
+									<div class="form-group">
+										<input type="button" value="Log in" class="btn btn-primary btn-lg" id="submit"/>
+										<input type="button" value="Sign up" class="btn btn-primary btn-lg" onclick="loadSignUp()"/>
+									</div>
+								</form> 
+							</div>
+						</div>
+					</div>
+				</div>
+
+							
+				<!--
+					<div class="text-center">
+						<button name="signup" class="btn btn-primary btn-lg" onclick="loadSignUp()">Sign Up</button>
+						
+						<button name="forgotPassword" class="btn btn-primary btn-lg" onclick="loadForgot()" >Forgot?</button>
+							-->
+
+					</div>
+						
+					
+
+					
+				</div><!--/.row-->
+			</div><!--/.container-->
+		</div><!--/#contact-page-->		
+	</section>
+	
+			
+		
+	<footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    &copy; 2018 <a target="_blank" href="http://port-9999.helloworld-garyluichuntingpeak2357682.codeanyapp.com/index" title="Free Twitter Bootstrap WordPress Themes and HTML templates">Mind Your Privacy</a>. All Rights Reserved.
+                    <!-- 
+                        All links in the footer should remain intact. 
+                        Licenseing information is available at: http://bootstraptaste.com/license/
+                        You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=OnePage
+                    -->
+                </div>
+				
+                <div class="top-bar">			
+					<div class="col-lg-12">
+					   <div class="social">
+							<ul class="social-share">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-skype"></i></a></li>
+							</ul>
+					   </div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </footer><!--/#footer-->
+	
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script> 
+	<script src="js/wow.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>	
+	<script src="js/main.js"></script>
+	<script>
+		
+	window.onload = function() {
+		loadMypage();
+		refreshTemp();
+	};	
+		
+	function refreshTemp(){
+			jQuery(document).ready(function($) {
+				$.ajax({
+				url : "http://api.wunderground.com/api/b20b6bbf1fd069a8/geolookup/conditions/q/HK/HongKong.json",
+				dataType : "jsonp",
+				success : function(parsed_json) {
+					var temp_c = parsed_json['current_observation']['temp_c'];
+					document.getElementById("temperature").innerHTML = temp_c + "&deg;C";
+				}
+				});
+			});
+	}	
+		
+	function loadMypage(){
+		if(localStorage.getItem("loginstate") == "0"){
+			window.location.href="mypage";
+		}else{
+			window.location.href="#";
+		}
+	}	
+	
+
+	/*function validate(){
+		if(document.getElementById("account").value == "admin"){
+			localStorage.setItem("loginstate", "0");
+			window.location.href="index";
+			
+		}else
+				alert("wrong  " + document.getElementById("account").value);
+	}
+	*/	
+	function storeUser(name,myID,list){
+		localStorage.setItem("loginstate", "0");
+		localStorage.setItem("loginname", name);
+		localStorage.setItem("loginID",myID);
+		localStorage.setItem("favlist",list);
+	}
+		
+		
+	function loadSignUp() {
+		window.location.href = "signup";
+
+	}
+	function loadForgot() {
+		window.location.href = "forgot";
+	}
+		
+	$(document).ready(function()
+		{   
+			$('#loginform').keypress(function(e){
+				if(e.keyCode==13)
+				$('#submit').click();
+   		});
+			$("#submit").click(function(){
+				
+					$.ajax(
+						{
+							url: "http://port-9999.db-garyluichuntingpeak1374430.codeanyapp.com/login", 
+							type: 'POST',
+							data: $('#loginform').serialize(),
+							success: function(result){
+								var resultArray = result.toString().split(",");
+							
+								if(resultArray[0] == "success"){
+									document.getElementById("warning").innerHTML = "";
+									
+									var tempname = result.replace(/^(success)/,"");
+									storeUser(resultArray[1],resultArray[2],resultArray[3]);
+									window.location.href="mypage";					
+								}
+								else if(result == "fail"){
+									document.getElementById("warning").innerHTML = "Account OR Password Incorrect. Please retry.";
+								}
+								
+								// var v = confirm(result);
+							//	alert(v);
+							//	if(result == "Suggest to signup")
+								//		window.location.href="mypage";
+								//alert("1231233");
+							//alert(result);  
+							 $("#account").html(result);
+							},error: function (xhr, textStatus, errorThrown) {
+								//alert(textStatus);
+								console.log(textStatus);
+							}
+						}
+					);
+				}
+			);
+
+	});
+	</script>
+  </body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Mind Your Privacy</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link href="css/animate.min.css" rel="stylesheet"> 
+	<link href="css/animate.css" rel="stylesheet" />
+	<link href="css/prettyPhoto.css" rel="stylesheet"> 
+	<link href="css/style.css" rel="stylesheet">
+	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="site-logo">
+						<a href="index" class="brand">Privacy</a><br>
+						<img src="images/temperature.png" style="width:20px;height:20px;"/><a id="temperature" onclick="refreshTemp()">Refresh</a>
+					
+					</div>
+				</div>					  
+
+				<div class="col-md-10">	 
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+							<i class="fa fa-bars"></i>
+						</button>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="menu">
+						<ul class="nav navbar-nav navbar-right">
+	
+								<li><a  id="logmein" onclick="Logout()">Logout</a></li>				
+						</ul>
+					</div>
+					<!-- /.Navbar-collapse -->		 
+				</div>
+			</div>
+		</div>		
+	</nav>
+
+	
+	<section id="qna">
+		<div class="container">
+			<div class="row">
+				<div class="center">
+					<div class="col-md-6 col-md-offset-3">
+						<br><br><br><br><br><br>
+						<h2>My favourite workshop</h2>
+						<hr>					
+						<center class="lead" id = "greeting"></center>
+					</div>
+				</div>
+				
+				<br>
+					<div class="col-md-12 wow fadeInLeft">
+					
+					<table id="myTable">
+						<tr class="header">
+			
+						<br><br>
+						</tr>
+						<div id = "Fav1" style="display:none">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#qa1">
+												Practical Workshop on Data Protection Law
+												<i class="fa fa-angle-right pull-right"></i>
+											</a>
+										</h3>
+									</div>
+									<div id="qa1" class="panel-collapse collapse">
+										<div class="panel-body">
+										<h3><a href="workshop1">Practical Workshop on Data Protection Law</a></h3>
+										<p>8 Feb</p>
+										<a class="preview" href="workshop1"><i class="fa fa-eye"></i> More</a>
+										<a class="btn btn-danger" style="float: right;" id="btnFav1" onclick="clickFav(1)" >UNLIKE</a>							
+										</div>
+									</div>
+								</div>
+						</div>
+						
+						<div id="Fav2" style="display:none">
+				
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#qa2">
+												Data Protection in Direct Marketing Activities
+												<i class="fa fa-angle-right pull-right"></i>
+											</a>
+										</h3>
+									</div>
+									<div id="qa2" class="panel-collapse collapse">
+										<div class="panel-body">										
+											<h3><a href="workshop2">Data Protection in Direct Marketing Activities</a></h3>
+										<p>26 Feb</p>
+										<a class="preview" href="workshop2"><i class="fa fa-eye"></i> More</a>
+										<a class="btn btn-danger" style="float: right;" id="btnFav2" onclick="clickFav(2)">UNLIKE</a>
+									
+										</div>
+									</div>
+								</div>
+						
+						</div>
+
+						
+						<div id="Fav3" style="display:none">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#qa3">
+												Data Protection in Human Resource Management
+												<i class="fa fa-angle-right pull-right"></i>
+											</a>
+										</h3>
+									</div>
+									<div id="qa3" class="panel-collapse collapse">
+										<div class="panel-body">
+										<h3><a href="workshop3">Data Protection in Human Resource Management</a></h3>
+										<p>28 Feb</p>
+										<a class="preview" href="workshop3"><i class="fa fa-eye"></i> More</a>
+										<a class="btn btn-danger" style="float: right;" id="btnFav3" onclick="clickFav(3)">UNLIKE</a>
+								
+										</div>
+									</div>
+								</div>
+						</div>
+							
+					<div id="Fav4" style="display:none">
+						<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#qa4">
+												Data Protection in Banking/Financial Services
+												<i class="fa fa-angle-right pull-right"></i>
+											</a>
+										</h3>
+									</div>
+									<div id="qa4" class="panel-collapse collapse">
+										<div class="panel-body">
+										<h3><a href="workshop4">Data Protection in Banking/Financial Services</a></h3>
+										<p>8 Mar</p>
+										<a class="preview" href="workshop4"><i class="fa fa-eye"></i> More</a>
+										<a class="btn btn-danger" style="float: right;" id="btnFav4" onclick="clickFav(4)">UNLIKE</a>
+								
+										</div>
+									</div>
+								</div>
+						</div>
+								
+						<div id="Fav5" style="display:none">
+							<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#qa5">
+												Data Protection and Data Access Request
+												<i class="fa fa-angle-right pull-right"></i>
+											</a>
+										</h3>
+									</div>
+									<div id="qa5" class="panel-collapse collapse">
+										<div class="panel-body">
+											<h3><a href="workshop5">Data Protection and Data Access Request</a></h3>
+										<p>9 Mar</p>
+										<a class="preview" href="workshop5"><i class="fa fa-eye"></i> More</a>
+										<a class="btn btn-danger" style="float: right;" id="btnFav5" onclick="clickFav(5)">UNLIKE</a>
+									
+										</div>
+									</div>
+								</div>
+						</div>
+								
+						<div id="Fav6" style="display:none">
+							<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#qa6">
+												Recent Court and Administrative Appeals Board Decisions
+												<i class="fa fa-angle-right pull-right"></i>
+											</a>
+										</h3>
+									</div>
+									<div id="qa6" class="panel-collapse collapse">
+										<div class="panel-body">
+
+											<h3><a href="workshop6">Recent Court and Administrative Appeals Board Decisions</a></h3>
+										<p>15 Mar</p>
+										<a class="preview" href="workshop6"><i class="fa fa-eye"></i> More</a>
+										<a class="btn btn-danger" style="float: right;" id="btnFav6" onclick="clickFav(6)">UNLIKE</a>
+									
+										</div>
+									</div>
+								</div>
+						</div>
+								
+						
+						
+						<div id="Fav7" style="display:none">
+							<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#qa7">
+												Privacy Management Programme
+												<i class="fa fa-angle-right pull-right"></i>
+											</a>
+										</h3>
+									</div>
+									<div id="qa7" class="panel-collapse collapse">
+										<div class="panel-body">
+											<h3><a href="workshop7">Privacy Management Programme</a></h3>
+										<p>20 Mar</p>
+										<a class="preview" href="workshop7"><i class="fa fa-eye"></i> More</a>
+										<a class="btn btn-danger" style="float: right;" id="btnFav7" onclick="clickFav(7)">UNLIKE</a>
+									
+											
+										</div>
+									</div>
+								</div>
+						</div>
+								
+						<div id="Fav8" style="display:none">
+							<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="panel-title">
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#qa7">
+												Data Protection in Insurance
+												<i class="fa fa-angle-right pull-right"></i>
+											</a>
+										</h3>
+									</div>
+									<div id="qa7" class="panel-collapse collapse">
+										<div class="panel-body">
+										<h3><a href="workshop8">Data Protection in Insurance</a></h3>
+										<p>26 Mar</p>
+										<a class="preview" href="workshop8"><i class="fa fa-eye"></i> More</a>
+										<a class="btn btn-danger" style="float: right;" id="btnFav8" onclick="clickFav(8)">UNLIKE</a>
+									
+										</div>
+									</div>
+								</div>
+						</div>
+						
+					</table>
+						
+				</div>
+				
+			
+			
+		</div>		
+	</section>
+		
+		
+	<footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+
+                    &copy; 2018 <a target="_blank" href="http://port-9999.helloworld-garyluichuntingpeak2357682.codeanyapp.com/index" title="Free Twitter Bootstrap WordPress Themes and HTML templates">Mind Your Privacy</a>. All Rights Reserved.
+                    <!-- 
+                        All links in the footer should remain intact. 
+                        Licenseing information is available at: http://bootstraptaste.com/license/
+                        You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=OnePage
+                    -->
+                </div>
+				
+                <div class="top-bar">			
+					<div class="col-lg-12">
+					   <div class="social">
+							<ul class="social-share">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-skype"></i></a></li>
+							</ul>
+					   </div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </footer><!--/#footer-->
+	
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script> 
+	<script src="js/wow.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>	
+	<script src="js/main.js"></script>
+	<script>
+	
+		
+		
+	window.onload = function() {
+		refreshTemp();
+		document.getElementById("greeting").innerHTML = "GOODDAY, "+localStorage.getItem("loginname");
+		refreshworkshop();
+	};	
+		function refreshworkshop(){
+				
+		$.ajax(
+				{	
+					url: "http://port-9999.db-garyluichuntingpeak1374430.codeanyapp.com/myfav", 
+					type: 'POST',
+					data: "id="+localStorage.getItem("loginID"),
+					success: function(result){
+						initworkshop(result);
+
+					},error: function (xhr, textStatus, errorThrown) {
+						//alert(textStatus);
+						console.log(textStatus);
+					}
+				}
+			);	
+		}
+		function refreshTemp(){
+			jQuery(document).ready(function($) {
+				$.ajax({
+				url : "http://api.wunderground.com/api/b20b6bbf1fd069a8/geolookup/conditions/q/HK/HongKong.json",
+				dataType : "jsonp",
+				success : function(parsed_json) {
+					var temp_c = parsed_json['current_observation']['temp_c'];
+					document.getElementById("temperature").innerHTML = temp_c + "&deg;C";
+				}
+				});
+			});
+	}	
+	function Logout(){
+		  localStorage.setItem("loginstate", "1");
+			window.location.href="index";
+	}	
+	
+	function initworkshop(value){
+		var max = 8;		
+		for(i = max-1; i >= 0 ;i--){
+			//alert(value - Math.pow(2,i));
+			if(value - Math.pow(2,i) >= 0){
+				//alert("show " +i);
+				value -= Math.pow(2,i);
+				manageworkshop(i,0);
+			}
+			else
+				manageworkshop(i,1);
+		}
+	}
+		
+	function manageworkshop(value,state) {
+		var shops =[
+			document.getElementById("Fav1"),
+			document.getElementById("Fav2"),
+			document.getElementById("Fav3"),
+			document.getElementById("Fav4"),
+			document.getElementById("Fav5"),
+			document.getElementById("Fav6"),
+			document.getElementById("Fav7"),
+			document.getElementById("Fav8")	
+		]
+		if(state == 0)
+			shops[value].style.display = "block";
+		else
+      shops[value].style.display = "none";
+    
+	}
+	function clickFav(value){
+		var btns =[
+			document.getElementById("btnFav1"),
+			document.getElementById("btnFav2"),
+			document.getElementById("btnFav3"),
+			document.getElementById("btnFav4"),
+			document.getElementById("btnFav5"),
+			document.getElementById("btnFav6"),
+			document.getElementById("btnFav7"),
+			document.getElementById("btnFav8")	
+		]
+		var favValue= Math.pow(2,value-1);
+		if(btns[value-1].innerHTML == "UNLIKE")
+			favValue = 0-favValue;
+		var newFavList = parseInt(localStorage.getItem("favlist")) + favValue;
+		localStorage.setItem("favlist", newFavList);
+
+		$.ajax(
+				{	
+					url: "http://port-9999.db-garyluichuntingpeak1374430.codeanyapp.com/fav", 
+					type: 'POST',
+					data: "id="+localStorage.getItem("loginID")+"&fav="+localStorage.getItem("favlist"),
+					success: function(result){
+						refreshworkshop();
+
+					},error: function (xhr, textStatus, errorThrown) {
+						//alert(textStatus);
+						console.log(textStatus);
+					}
+				}
+			);	
+	}
+	
+	</script>
+  </body>
+</html>
